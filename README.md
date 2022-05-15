@@ -1,1 +1,22 @@
 # microservices-poc
+GET
+http://localhost:8081/users/{id}
+http://localhost:8081/users/
+http://localhost:8082/departments/{id}
+http://localhost:8082/departments/
+http://localhost:9091/departments/
+http://localhost:9091/users/{id}
+POST
+http://localhost:8081/users/
+{
+	"name":"",
+	"email":"",
+	"phone":"",
+	"departmentId":""
+}
+http://localhost:8082/departments/
+{
+	"departmentId":1,
+	"departmentName":"",
+	"departmentAddress":""
+}
