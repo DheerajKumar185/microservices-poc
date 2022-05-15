@@ -1,0 +1,22 @@
+server:
+  port: 9091
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+
+spring:
+  application:
+    name: API-GAATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: USER-SERVICE
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/users/**
+        - id: DEPARTMENT-SERVICE
+          uri: lb://DEPARTMENT-SERVICE
+          predicates:
+            - Path=/departments/**
