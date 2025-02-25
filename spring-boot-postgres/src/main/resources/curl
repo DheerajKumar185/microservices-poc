@@ -1,0 +1,21 @@
+curl --location 'http://localhost:8080/books/' \
+--header 'Content-Type: application/json' \
+--data '{
+    "title": "A Passage to England",
+    "author": "Nirad C. Chaudhuri",
+    "price": 76.25
+  }'
+
+curl --location 'http://localhost:8080/books/4'
+
+curl --location 'http://localhost:8080/books/'
+
+curl --location --request PUT 'http://localhost:8080/books/4' \
+--header 'Content-Type: application/json' \
+--data '{
+    "title": "A Brush with Life",
+    "author": "Satish Gujral",
+    "price": 63.04
+  }'
+
+curl --location --request DELETE 'http://localhost:8080/books/4'
